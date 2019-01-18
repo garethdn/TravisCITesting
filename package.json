@@ -1,5 +1,5 @@
 {
-  "name": "travis-citesting",
+  "name": "travis-ci-testing",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "ghpages": "ng build --prod --output-path docs  --base-href /travis-ci-testing/"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +36,7 @@
     "codelyzer": "~4.3.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
+    "json": "^9.0.6",
     "karma": "~3.0.0",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.1",

@@ -1,0 +1,21 @@
+language: node_js
+
+deploy:
+  provider: npm
+  before_script: "npm run ghpages"
+  script: "release.sh"
+  skip_cleanup: true
+  email: garethdn@gmail.com
+  api_key:
+    secure: ZuZWo3pygyzBzkoxLW93+1MfMU+xk7Y/C+gARl5DT9EJfPQ2+JGFyif1dkt4NJFMWI4tOMsuYDUJeNotyBt8NxbZabHW97lsZyoO4PBkTFt/9ZjhjC6AYYL6k4skc8mKo+GNDCNR4bp59v/MPvolxHjnh6Phc12nIpQuumJ1DLSEqAsx2eHdtVxAVHSMD8NzHN55AKuZaT1Xl8N6wKLybt9jSlEY+jIkFsV7+MD8LoNcJdo7yC3BdnUqbHRojaNMkql+H5iW3+JDmsdMIoHs/MFCrbu+KYxlbVLA/qiFTFuNMb8QSgdrGznS4mWS4QOZahE5Pw2aOOQhMwY/2KFMUI3WK4y3Qe4FyO7ih5BEm37V9geL5DW7MFtvVpZ49sniw/uJt+NqDjvNWoMjeYgdUJEJscWbX0LtC8LC6lAMUZbAdoltyjYC04I3tyta0Ce+XjNGgdlxsUSguhQ4wma7gny4whio9snVQM9j+5pgX9EBi+Wn843/Y2/Ig6RKLniynjp3GrrL4uflVjwlId9CKJuUnoJY3lFBiXiGfQJmmmuO3skMutf6T+RCsLbkvNekZyUejV6rpX2+NLIdfiI6td8Y40ZJlFR5ozwn9UwIfJqMV8Evfhezd9NttmS5kGpnsBCjIWHRw/IsjOWjJb0fcmj6lUQsCqJbdDTrTEw1G2Q=
+  on:
+    tags: true
+    repo: garethdn/travis-ci-testing
+    branch: master
+
+notifications:
+  email:
+    recipients:
+    - gareth.nolan@newswhip.com
+    on_success: change
+    on_failure: always
