@@ -12,7 +12,6 @@ deploy:
   on:
     tags: true
     repo: garethdn/TravisCITesting
-    branch: master
 
 notifications:
   email:
